@@ -48,7 +48,7 @@ public class IntelliDocController {
 	}
 
 	public static Map<String, String> patientSymptom = new HashMap<>();
-	private static String path = "C:\\Users\\amby\\Downloads\\SUSH\\SpringMVC\\src\\main\\resources\\inputData.txt";
+	private static String path = "C:\\Users\\amby\\226_final\\new\\src\\com\\sahoo\\generator\\inputData.txt";
 
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public List<PatientReport> getPatientRecord(@PathVariable String name,
