@@ -53,10 +53,10 @@ public class IntelliDocController {
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public List<PatientReport> getPatientRecord(@PathVariable String name,
 			ModelMap model) {// Filtering patients with Alzheimer's disease
-		patientDataFrame.show();
+		patientDataFrame.show(25);
 		System.out.println("-----------------------------");
 		patientDataFrame.filter(patientDataFrame.col("name").equalTo(name))
-				.show();
+				.show(25);
 
 		List<Row> patientDataTemp = patientDataFrame.filter(
 				patientDataFrame.col("name").equalTo(name)).collectAsList();
